@@ -35,4 +35,4 @@ Content-Type: application/json
 }
 
 ### DELETE STUDENT
-DELETE http://localhost:3000/students/3
+DELETE http://localhost:3000/students/2
