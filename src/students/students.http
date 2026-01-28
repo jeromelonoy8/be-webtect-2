@@ -1,0 +1,35 @@
+### GET STUDENTS
+GET http://localhost:3000/students
+
+### CREATE STUDENT
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+   "first_name": "Gelo",
+  "last_name": "Ball",
+  "email": "ball.gelo@example.com",
+  "age": 25,
+  "course": "Physical Education",
+  "year_level": 4,
+  "gpa": 1.9,
+  "enrollment_status": "Active"
+}
+
+### UPDATE STUDENT
+PUT http://localhost:3000/students/3
+Content-Type: application/json
+
+{
+  "first_name": "Melo",
+  "last_name": "Ball",
+  "email": "ball.gelo@example.com",
+  "age": 22,
+  "course": "Physical Education",
+  "year_level": 4,
+  "gpa": 1.4,
+  "enrollment_status": "Active"
+}
+
+### DELETE STUDENT
+DELETE http://localhost:3000/students/3
