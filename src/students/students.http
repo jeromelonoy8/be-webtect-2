@@ -1,5 +1,8 @@
+### GET ALL STUDENTS
+GET http://localhost:3000/students
+
 ### GET STUDENTS
-GET http://localhost:3000/students/3
+GET http://localhost:3000/students/1
 
 ### CREATE STUDENT
 POST http://localhost:3000/students
