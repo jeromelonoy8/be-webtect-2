@@ -1,15 +1,23 @@
-import { serve } from '@hono/node-server'
-import app from './index'
+import express from 'express';
+import cors from 'cors';
 
-// Load environment variables
-import { config } from 'dotenv'
-config()
+const app = express();
 
-const port = process.env.PORT ? parseInt(process.env.PORT) : 3000
+app.use(cors({
+  origin: 'http://localhost:4200',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  credentials: true
+}));
 
-console.log(`🚀 Server is running on http://localhost:${port}`)
+app.use(express.json());
 
-serve({
-  fetch: app.fetch,
-  port
-})
+
+app.get('/', (req, res) => {
+  res.send('Server is running!');
+});
+
+const PORT = 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
